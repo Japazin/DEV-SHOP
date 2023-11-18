@@ -4,21 +4,39 @@ class ValidaFormula {
     this.eventos();
   }
   eventos() {
-    this.formulario.addEventListener("submit", (e) => {
+    this.formulario.addEventListener('submit', (e) => {
       this.handleSubmit(e);
     });
   }
   handleSubmit(e) {
     e.preventDefault();
-    const camposValidos = this.camposValidos();
-    const senhasValidas = this.senhasValidas();
-    if(camposValidos && senhasValidas){
+    const camposValidoss = this.camposValidos();
+    const senhasValidass = this.senhasValidas();
+
+    if(camposValidoss && senhasValidass){
       alert('Fromulário enviado');
       this.formulario.submit();
+      //inserir salvar dados aqui
+      this.salvarUsuario();
     }
   }
+//  salvarUsuario(){
+//   const usuario= {
+    // this.nome=nome;
+    // this.sobreNome=nome;
+    // this.cpf=cpf;
+    // this.nomeUsuario=usuario;
+    // this.senha=senha;
 
-  senhasValidas(){
+
+//   }
+  
+//     const usuario0 = JSON.stringify(usuariodatabase);
+//     localStorage.setItem("tarefas", usuario0);
+//     console.log(usuario0)
+//  }
+
+  senhasValidas() {
     let valid =true;
     const senha = this.formulario.querySelector('.Senha');
     const repetirSenha =this.formulario.querySelector('.Repetir-senha');
@@ -32,7 +50,7 @@ class ValidaFormula {
       valid = false;
       this.criaerro(senha, 'Senha precisa estar entre 6 e 12 caracteres.')
     }
-
+    return valid;
   }
   camposValidos() {
     let valid = true;
@@ -55,6 +73,7 @@ class ValidaFormula {
         if (!this.validaUsuario(campo)) valid = false;
       }
     }
+    return valid;
   }
 
   validaUsuario(campo) {
@@ -93,3 +112,4 @@ class ValidaFormula {
   }
 }
 const valida = new ValidaFormula();
+

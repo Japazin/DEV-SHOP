@@ -29,10 +29,11 @@ body {
 form input, form label, form button {
   display: block;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 form input {
+  border-radius: 10px;
   font-size: 24px;
   height: 50px;
   padding: 0 20px;
@@ -51,6 +52,7 @@ form button {
   height: 50px;
   cursor: pointer;
   margin-top: 30px;
+  border-radius: 10px;
 }
 
 form button:hover {
