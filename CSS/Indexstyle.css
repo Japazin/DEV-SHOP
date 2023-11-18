@@ -1,0 +1,23 @@
+body {
+   margin: 0;
+   /* Remova as margens padrão do corpo */
+   padding: 0;
+   /* Remova o preenchimento padrão do corpo */
+   background-size: cover;
+   /* Cobrir toda a área do corpo */
+   background-position: center;
+   /* Centralizar a imagem */
+   height: 100vh;
+   /* 100% da altura da tela */
+}
+
+div {
+   display: flex;
+   justify-content: center;
+   padding-top: 150px;
+}
+
+.cadastro {
+   color: rgb(239, 239, 239);
+   font-size: 30px;
+}
