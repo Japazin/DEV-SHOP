@@ -13,40 +13,47 @@ class ValidaFormula {
     const camposValidoss = this.camposValidos();
     const senhasValidass = this.senhasValidas();
 
-    if(camposValidoss && senhasValidass){
+    if (camposValidoss && senhasValidass) {
       alert('Fromulário enviado');
-      this.formulario.submit();
+     
       //inserir salvar dados aqui
-      this.salvarUsuario();
+      const usuarioValido = this.salvarUsuario();
+      console.log(usuarioValido);
+      //salvar em JSON
+      const usuario0 = JSON.stringify(usuarioValido);
+      localStorage.setItem("Usuário", usuario0);
+      console.log(usuario0)
     }
   }
-//  salvarUsuario(){
-//   const usuario= {
-    // this.nome=nome;
-    // this.sobreNome=nome;
-    // this.cpf=cpf;
-    // this.nomeUsuario=usuario;
-    // this.senha=senha;
+     
+  salvarUsuario() {
+    let usuario;
+    const nomeU =  this.formulario.querySelector('.Sobrenome')
+    const sobreNomeU = this.formulario.querySelector('.Sobrenome');
+    const cpfU = this.formulario.querySelector('.CPF');
+    const nomeUsuarioU = this.formulario.querySelector('.Usuário');
+    const senhaU = this.formulario.querySelector('.Senha');
 
-
-//   }
-  
-//     const usuario0 = JSON.stringify(usuariodatabase);
-//     localStorage.setItem("tarefas", usuario0);
-//     console.log(usuario0)
-//  }
+    return usuario = {
+      nome: nomeU.value,
+      sobreNome: sobreNomeU.value,
+      cpf: cpfU.value,
+      nomeUsuario: nomeUsuarioU.value,
+      senha: senhaU.value
+    };
+  }
 
   senhasValidas() {
-    let valid =true;
+    let valid = true;
     const senha = this.formulario.querySelector('.Senha');
-    const repetirSenha =this.formulario.querySelector('.Repetir-senha');
+    const repetirSenha = this.formulario.querySelector('.Repetir-senha');
 
-    if(senha.value !== repetirSenha.value){
+    if (senha.value !== repetirSenha.value) {
       valid = false;
-      this.criaerro(senha,'Campos senha e repetir senha precisam ser iguais.');
-      this.criaerro(repetirSenha,'Campos senha e repetir senha precisam ser iguais.');
+      this.criaerro(senha, 'Campos senha e repetir senha precisam ser iguais.');
+      this.criaerro(repetirSenha, 'Campos senha e repetir senha precisam ser iguais.');
     }
-    if(senha.value.length < 6 || senha.value.length > 12){
+    if (senha.value.length < 6 || senha.value.length > 12) {
       valid = false;
       this.criaerro(senha, 'Senha precisa estar entre 6 e 12 caracteres.')
     }
@@ -112,4 +119,4 @@ class ValidaFormula {
   }
 }
 const valida = new ValidaFormula();
-
+console.log(valida.salvarUsuario());
