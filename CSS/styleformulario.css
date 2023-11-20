@@ -68,3 +68,7 @@ form button:hover {
   font-size: 15px;
   color: red;
 }
+.titulologin{
+display: flex;
+align-items: center;
+}

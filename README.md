@@ -4,7 +4,7 @@
 
  Enviar para Banco de Dados.
   
- Criar uma validação de Usuário já cadastrado no BD sistema no  para não ter usuarios iguais, e poder validar o envio novamente para o BD
+ Criar janela de login uma validação de Usuário já cadastrado no BD sistema no  para não ter usuarios iguais, e poder validar o envio novamente para o BD
 
  1.usuário já existe cadastrado.
 
