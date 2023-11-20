@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 :root {
-  --primary-color: rgb(107, 29, 86);
+  --primary-color: rgb(20, 18, 20);
   --primary-color-darker: rgb(49, 9, 56);
 }
 
@@ -58,17 +58,7 @@ form button {
 form button:hover {
   background: var(--primary-color-darker);
 }
-.relogio {
-  font-size: 3em;
-}
 
-.pausado {
-  color: red;
-}.erro-text{
-  font-size: 15px;
-  color: red;
-}
 .titulologin{
-display: flex;
-align-items: center;
+left: 50%;
 }

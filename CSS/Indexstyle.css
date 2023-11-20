@@ -14,10 +14,11 @@ body {
 div {
    display: flex;
    justify-content: center;
-   padding-top: 150px;
+   padding-top: 100px;
 }
 
 .cadastro {
    color: rgb(239, 239, 239);
    font-size: 30px;
+   text-decoration:none;
 }
