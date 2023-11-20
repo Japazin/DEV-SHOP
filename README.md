@@ -1,6 +1,6 @@
  Realizado a colocação do formulário de cadastro ok
 
- Realizar o salvamento dos dados dos cadastro do usuário em JSON
+ Realizar o salvamento dos dados dos cadastro do usuário em JSON ok
 
  Enviar para Banco de Dados.
   
