@@ -11,14 +11,30 @@ body {
    /* 100% da altura da tela */
 }
 
-div {
+.a-chatwpp {
    display: flex;
    justify-content: center;
    padding-top: 100px;
 }
 
 .cadastro {
+   display: flex;
+   justify-content: center;
    color: rgb(239, 239, 239);
    font-size: 30px;
-   text-decoration:none;
+   text-decoration: none;
+   padding-top: 40px;
+}
+
+.login {
+   display: flex;
+   justify-content: center;
+   color: rgb(239, 239, 239);
+   font-size: 30px;
+   text-decoration: none;
+   padding-top: 20px;
+}
+.whatsapp {
+   width:200px; /* largura de 300 pixels */
+  height: 50px; /* altura de 200 pixels */
 }
