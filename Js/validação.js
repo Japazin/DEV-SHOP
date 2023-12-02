@@ -30,7 +30,6 @@ class ValidaFormula {
     let usuario;
     const nomeU =  this.formulario.querySelector('.Sobrenome')
     const sobreNomeU = this.formulario.querySelector('.Sobrenome');
-    const cpfU = this.formulario.querySelector('.CPF');
     const nomeUsuarioU = this.formulario.querySelector('.Usuário');
     const senhaU = this.formulario.querySelector('.Senha');
 
@@ -73,9 +72,7 @@ class ValidaFormula {
         this.criaerro(campo, `campo "${label}" não pode estar vazio.`);
         valid = false;
       }
-      if (campo.classList.contains("CPF")) {
-        if (!this.validacpf(campo)) valid = false;
-      }
+     
       if (campo.classList.contains("Usuário")) {
         if (!this.validaUsuario(campo)) valid = false;
       }
@@ -100,17 +97,6 @@ class ValidaFormula {
     }
     return valid;
   }
-
-  validacpf(campo) {
-    const cpf = new ValidaCPF(campo.value);
-
-    if (!cpf.valida()) {
-      this.criaerro(campo, "CPF inválido.");
-      return false;
-    }
-    return true;
-  }
-
   criaerro(campo, msg) {
     const div = document.createElement("div");
     div.innerHTML = msg;
