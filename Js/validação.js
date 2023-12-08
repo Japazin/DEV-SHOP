@@ -31,12 +31,10 @@ class ValidaFormula {
     const nomeU =  this.formulario.querySelector('.Sobrenome')
     const sobreNomeU = this.formulario.querySelector('.Sobrenome');
     const nomeUsuarioU = this.formulario.querySelector('.Usuário');
-    const senhaU = this.formulario.querySelector('.Senha');
 
     return usuario = {
       nome: nomeU.value,
       sobreNome: sobreNomeU.value,
-      cpf: cpfU.value,
       nomeUsuario: nomeUsuarioU.value,
       senha: senhaU.value
     };
